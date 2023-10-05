@@ -1,0 +1,267 @@
+@import url("https://fonts.googleapis.com/css2?family=Ysabeau+Infant:ital,wght@0,1;0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;0,1000;1,1;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900;1,1000&display=swap");
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-size: inherit;
+  outline: none;
+}
+
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+ul,
+ol,
+ul[role=list],
+ol[role=list] {
+  list-style: none;
+}
+
+/* Set core root defaults */
+html:focus-within {
+  scroll-behavior: smooth;
+}
+
+/* Set core body defaults */
+body,
+html {
+  height: 100%;
+}
+
+body {
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+}
+
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+}
+
+/* Make images easier to work with */
+img,
+picture,
+svg {
+  max-width: 100%;
+  display: block;
+}
+
+/* Inherit fonts for inputs and buttons */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/* Remove all animations, transitions and smooth scroll for people that prefer not to see them */
+@media (prefers-reduced-motion: reduce) {
+  html:focus-within {
+    scroll-behavior: auto;
+  }
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+@keyframes slideAnimation {
+  from {
+    opacity: 0;
+    transform: translateX(-50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+.row {
+  height: 100%;
+}
+
+html {
+  font-family: "Ysabeau Infant", sans-serif;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+  display: inline-block;
+}
+
+span {
+  display: inline-block;
+}
+
+img,
+svg {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+button {
+  border: none;
+  background-color: transparent;
+  color: inherit;
+  cursor: pointer;
+}
+
+input {
+  border: none;
+  outline: none;
+  width: 100%;
+  height: 100%;
+}
+
+ul {
+  display: flex;
+  align-items: center;
+  justify-content: start;
+  flex-wrap: nowrap;
+  gap: 0;
+  padding: 0;
+  margin: 0;
+}
+
+.button {
+  display: flex;
+}
+
+header nav {
+  max-height: 85px;
+  background-color: #755bb4;
+  background: linear-gradient(90deg, #a046dd 0%, #755bb4 50%);
+  color: #eee;
+  font-weight: 600;
+  font-size: 0.875rem;
+}
+header nav .row {
+  align-items: center;
+}
+header nav .logo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: nowrap;
+  gap: 0;
+}
+header nav .logo a:hover img {
+  transform: scale(1.05);
+}
+header nav .logo a img {
+  transition: all 1s cubic-bezier(0.4, 0.05, 0.31, 1.94);
+  height: 80px !important;
+}
+header nav #list,
+header nav .login_reg-btn {
+  gap: 0.9rem;
+}
+header nav #list li a,
+header nav .login_reg-btn li a {
+  border-radius: 0.7rem;
+  transition: all 0.25s ease-in-out;
+  padding: 8px 10px;
+}
+header nav #list li a:hover,
+header nav .login_reg-btn li a:hover {
+  background-color: #8670ba;
+}
+header nav .login_reg-btn {
+  justify-content: end;
+}
+header nav .login_reg-btn__register-btn a {
+  background-color: #322653;
+}
+header nav .login_reg-btn__register-btn a:hover {
+  background-color: rgba(50, 38, 83, 0.737254902) !important;
+}
+header #bottom {
+  display: none;
+}
+@media (max-width: 1024px) {
+  header nav .row #list {
+    gap: 0.5rem !important;
+  }
+}
+@media (max-width: 992px) {
+  header nav .row .col-3:first-child {
+    width: 50%;
+    flex: 50%;
+  }
+  header nav .row .col-3:first-child .logo {
+    justify-content: start;
+    padding: 8px;
+  }
+  header nav .row .col-3:first-child .logo img {
+    height: 50px !important;
+  }
+  header nav .row .col-6 {
+    display: none;
+  }
+}
+@media (max-width: 576px) {
+  header #top {
+    display: none;
+  }
+  header #bottom {
+    display: block;
+  }
+  header #bottom .sidebar-btn {
+    font-size: 1.5rem;
+  }
+}
+
+#slider .slider {
+  position: relative;
+}
+#slider .slider__images__img {
+  display: none;
+}
+#slider .slider__images__img img {
+  height: 650px;
+  object-fit: cover;
+}
+#slider .slider__images ._active {
+  display: flex;
+}
+#slider .slider__btns {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: nowrap;
+  gap: 0;
+  position: absolute;
+  inset: 0;
+  left: 2rem;
+  right: 2rem;
+}
+#slider .slider__btns .button span {
+  border-radius: 50%;
+  border: 1px solid #322653;
+}
+#slider .slider__btns .button span svg {
+  width: 3rem;
+  height: 3rem;
+  fill: #755bb4;
+  transition: all 0.25s ease-in-out;
+}
+#slider .slider__btns .button span svg:hover {
+  opacity: 0.8;
+}
+
+/*# sourceMappingURL=style.css.map */

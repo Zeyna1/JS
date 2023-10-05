@@ -1,0 +1,109 @@
+@use '../utils/variable' as *;
+@use '../utils/mixin' as *;
+@use '../utils/extend' as *;
+@use '../utils/function' as *;
+@use '../utils/keyFrames' as *;
+
+header {
+    nav {
+        max-height: 85px;
+        .row {
+            align-items: center;
+        }
+        background-color: $primary-clr;
+        background: $linear-bg-color;
+        color: $white-clr;
+        font-weight: 600;
+        font-size: $fs-300;
+        .logo {
+            @include flexbox(center, center, nowrap, 0);
+            // overflow: hidden;
+            a {
+                &:hover {
+                    img {
+                        transform: scale(1.05);
+                    }
+                }
+                img {
+                    transition: $transition-slow;
+                    height: 80px !important;
+                }
+            }
+        }
+        #list,
+        .login_reg-btn {
+            gap: 0.9rem;
+
+            li {
+                a {
+                    border-radius: 0.7rem;
+                    transition: $transition;
+                    padding: 8px 10px;
+                    &:hover {
+                        background-color: $purple-light-clr;
+                    }
+                }
+            }
+        }
+        .login_reg-btn {
+            justify-content: end;
+            &__register-btn {
+                a {
+                    background-color: #322653;
+
+                    &:hover {
+                        background-color: #322653bc !important;
+                    }
+                }
+            }
+        }
+    }
+
+    #bottom {
+        display: none;
+    }
+
+    @media (max-width: 1024px) {
+        nav {
+            .row {
+                #list {
+                    gap: 0.5rem !important;
+                }
+            }
+        }
+    }
+    @media (max-width: 992px) {
+        nav {
+            .row {
+                .col-3:first-child {
+                    width: 50%;
+                    flex: 50%;
+
+                    .logo {
+                        justify-content: start;
+                        padding: 8px;
+                        img {
+                            height: 50px !important;
+                        }
+                    }
+                }
+                .col-6 {
+                    display: none;
+                }
+            }
+        }
+    }
+    @media (max-width: 576px) {
+        #top {
+            display: none;
+        }
+
+        #bottom {
+            display: block;
+
+            .sidebar-btn {
+                font-size: 1.5rem;
+            }
+        }
+    }
+}

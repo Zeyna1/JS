@@ -1,0 +1,45 @@
+@use "./variable" as *;
+
+@mixin flexbox($align, $justify, $wrap, $gap, $direction: null) {
+  display: flex;
+  flex-direction: $direction;
+  align-items: $align;
+  justify-content: $justify;
+  flex-wrap: $wrap;
+  gap: $gap;
+}
+
+@mixin sizes($height, $width) {
+  height: $height;
+  width: $width ;
+}
+
+@mixin position(
+  $pos,
+  $inset: null,
+  $top: null,
+  $left: null,
+  $right: null,
+  $bottom: null
+) {
+  position: $pos;
+  inset: $inset;
+  top: $top;
+  left: $left;
+  right: $right;
+  bottom: $bottom;
+}
+
+@mixin before_after($content, $width, $height, $bg-color: null) {
+  content: $content;
+  width: $width;
+  height: $height;
+  background-color: $bg-color;
+}
+
+@mixin bg-img($size, $repeat, $pos: null, $attachment: null) {
+  background-size: $size;
+  background-repeat: $repeat;
+  background-position: $pos;
+  background-attachment: $attachment;
+}

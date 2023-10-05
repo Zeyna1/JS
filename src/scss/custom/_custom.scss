@@ -1,0 +1,7 @@
+@use './../utils/variable' as *;
+@use '../utils/mixin';
+@use '../utils/extend';
+
+.button {
+    display: flex;
+}

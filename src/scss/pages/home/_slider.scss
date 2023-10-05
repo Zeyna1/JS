@@ -1,0 +1,45 @@
+@use '../../utils/variable' as *;
+@use '../../utils/mixin' as *;
+@use '../../utils/extend' as *;
+@use '../../utils/function' as *;
+@use '../../utils/keyFrames' as *;
+
+#slider {
+    .slider {
+        position: relative;
+        &__images {
+            &__img {
+                display: none;
+                img {
+                    height: 650px;
+                    object-fit: cover;
+                }
+            }
+            ._active {
+                display: flex;
+            }
+        }
+
+        &__btns {
+            @include flexbox(center, space-between, nowrap, 0);
+            @include position(absolute, 0, $left: 2rem, $right: 2rem);
+            .button {
+                span {
+                    border-radius: 50%;
+                    border: 1px solid $purple-dark-clr;
+                    svg {
+                        width: 3rem;
+                        height: 3rem;
+                        fill: $purple-clr;
+                        transition: $transition;
+
+                        &:hover {
+                            opacity: 0.8;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+ 

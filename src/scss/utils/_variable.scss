@@ -1,0 +1,37 @@
+@use 'function' as *;
+@import url('https://fonts.googleapis.com/css2?family=Ysabeau+Infant:ital,wght@0,1;0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;0,1000;1,1;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900;1,1000&display=swap');
+
+// Font-sizes
+$fs-100: toRem(9);
+$fs-200: toRem(12);
+$fs-300: toRem(14);
+$fs-400: toRem(15);
+$fs-500: toRem(18);
+$fs-600: toRem(24);
+$fs-700: toRem(38);
+$fs-800: toRem(48);
+
+// Colors
+$purple-clr: #755bb4;
+$purple-dark-clr: #322653;
+$purple2-clr: #a046dd;
+$purple3-clr: #8062d6;
+$blue-light-clr: #9288f8;
+$ckinny-clr: #ffd2d7;
+$purple-light-clr: #8670ba;
+$dark-gray-clr: #555;
+$black-clr: #0e0e0e;
+$gray-clr: #f4f4f4;
+$white-clr: #eee;
+$blue-clr: #2189ff;
+$linear-bg-color: linear-gradient(90deg, $purple2-clr 0%, $purple-clr 50%);
+
+$primary-clr: $purple-clr;
+$secondary-clr: $gray-clr;
+
+$default_ff: 'Ysabeau Infant', sans-serif;
+
+$transition: all 0.25s ease-in-out;
+$transition-slow: all 1s cubic-bezier(0.4, 0.05, 0.31, 1.94);
+
+$navbar-shadow: 2px 0 12px 0 rgba(0, 0, 0, 0.15);
